@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-contactus',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
+    getName(){
+      Swal.fire(
+        'Success!',
+        'ส่งรายละเอียดเสร็จสิ้น!<br>ขอบคุณสำหรับการติดต่อ',
+        'success'
+      )
+    }
+    
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
 }
